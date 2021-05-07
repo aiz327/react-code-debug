@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "debug:15",
+      "label": "npm: debug:15",
+      "detail": "npm run debug:15",
+      "problemMatcher": [
+        {
+          "base": "$tsc-watch",
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "Starting the development server...",
+            "endsPattern": "Compiled successfully"
+          }
+        }
+      ],
+      "isBackground": true
+    }
+  ]
+}
