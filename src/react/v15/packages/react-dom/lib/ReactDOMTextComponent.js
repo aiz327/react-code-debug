@@ -117,7 +117,7 @@ _assign(ReactDOMTextComponent.prototype, {
       this._currentElement = nextText;
       var nextStringText = '' + nextText;
       if (nextStringText !== this._stringText) {
-        // TODO: Save this as pending props and use performUpdateIfNecessary
+        // TODO: Save this as pending props and use performUpdateIfNzecessary
         // and/or updateComponent to do the actual update for consistency with
         // other component types?
         this._stringText = nextStringText;

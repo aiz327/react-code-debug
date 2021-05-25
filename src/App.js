@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
+import './App.css';
+
+class NumDemo extends React.Component {
+  state = {
+    num: 1,
+  }
+  clickAdd = () => {
+    this.setState({
+      num: this.state.num + 1
+    })
+  }
+  render() {
+    return (
+      <div className="num-container">
+        <div className="num">现在点击次数{this.state.num}</div>
+        <button onClick={this.clickAdd}>点击+1</button>
+      </div>
+    )
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App1.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Appdd">
+      123
+      <NumDemo/>
     </div>
   );
 }

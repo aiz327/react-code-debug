@@ -71,7 +71,7 @@ function getReactRootElementInContainer(container) {
   if (container.nodeType === DOC_NODE_TYPE) {
     return container.documentElement;
   } else {
-    return container.firstChild;
+     return container.firstChild;
   }
 }
 
@@ -306,7 +306,7 @@ var ReactMount = {
     process.env.NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, '_renderNewRootComponent(): Render methods should be a pure function ' + 'of props and state; triggering nested component updates from ' + 'render is not allowed. If necessary, trigger nested updates in ' + 'componentDidUpdate. Check the render method of %s.', ReactCurrentOwner.current && ReactCurrentOwner.current.getName() || 'ReactCompositeComponent') : void 0;
 
     !isValidContainer(container) ? process.env.NODE_ENV !== 'production' ? invariant(false, '_registerComponent(...): Target container is not a DOM element.') : _prodInvariant('37') : void 0;
-
+    // REACT CODE DEBUG ADD 事件相关先搁置
     ReactBrowserEventEmitter.ensureScrollValueMonitoring();
     var componentInstance = instantiateReactComponent(nextElement, false);
 
@@ -352,6 +352,8 @@ var ReactMount = {
     });
 
     var nextContext;
+    // REACT CODE DEBUG ADD
+    // parentComponents无值的时候
     if (parentComponent) {
       var parentInst = ReactInstanceMap.get(parentComponent);
       nextContext = parentInst._processChildContext(parentInst._context);

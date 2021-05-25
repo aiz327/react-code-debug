@@ -166,7 +166,6 @@ var ReactElement = function (type, key, ref, self, source, owner, props) {
  * See https://facebook.github.io/react/docs/top-level-api.html#react.createelement
  */
 ReactElement.createElement = function (type, config, children) {
-  
   var propName;
 
   // Reserved names are extracted
