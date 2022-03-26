@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Test from './test'
-import Home from './home'
-import './App.css';
+import { Link } from 'react-router-dom';
 
 class NumDemo extends React.Component {
   state = {
@@ -32,8 +29,8 @@ class NumDemo extends React.Component {
     //   }
     // , 0);
     Promise.resolve().then(() => {
-      this.setState({ num: this.state.num + 1 })
-      this.setState({ num: this.state.num + 1 })
+      this.setState({num: this.state.num + 1})
+      this.setState({num: this.state.num + 1})
     })
   }
   render() {
@@ -47,15 +44,20 @@ class NumDemo extends React.Component {
   }
 }
 
-function App() {
+function Home() {
+  useEffect(() => {
+    console.log(Home.test)
+    Home.test = true
+  })
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/test" component={Test} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </BrowserRouter>
+    <div className="Appdd">
+      <Link to="/test">test页</Link>
+      <div className="Appdd">
+        123
+        <NumDemo/>
+      </div>
+    </div>
   );
 }
 
-export default App;
+export default Home;

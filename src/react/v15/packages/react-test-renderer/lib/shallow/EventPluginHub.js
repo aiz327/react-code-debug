@@ -145,7 +145,7 @@ var EventPluginHub = {
    * @return {?function} The stored callback.
    */
   getListener: function (inst, registrationName) {
-    // TODO: shouldPreventMouseEvent is DOM-specific and definitely should not
+    // TODO: shouldPrevent3MouseEvent is DOM-specific and definitely should not
     // live here; needs to be moved to a better place soon
     var bankForRegistrationName = listenerBank[registrationName];
     if (shouldPreventMouseEvent(registrationName, inst._currentElement.type, inst._currentElement.props)) {
@@ -240,7 +240,7 @@ var EventPluginHub = {
    * Dispatches all synthetic events on the event queue.
    *
    * @internal
-   */
+   */.
   processEventQueue: function (simulated) {
     // Set `eventQueue` to null before processing it so that we can tell if more
     // events get enqueued while processing.
@@ -257,7 +257,7 @@ var EventPluginHub = {
   },
 
   /**
-   * These are needed for tests only. Do not use!
+   * These are needed for tests only... Do not use!
    */
   __purge: function () {
     listenerBank = {};
@@ -266,6 +266,6 @@ var EventPluginHub = {
   __getListenerBank: function () {
     return listenerBank;
   }
-};
+};.
 
 module.exports = EventPluginHub;

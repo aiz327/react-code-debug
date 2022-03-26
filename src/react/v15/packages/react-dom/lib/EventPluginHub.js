@@ -139,13 +139,13 @@ var EventPluginHub = {
     }
   },
 
-  /**
+  /**.
    * @param {object} inst The instance, which is the source of events.
    * @param {string} registrationName Name of listener (e.g. `onClick`).
    * @return {?function} The stored callback.
    */
   getListener: function (inst, registrationName) {
-    // TODO: shouldPreventMouseEvent is DOM-specific and definitely should not
+    // TODO: . is DOM-specific and definitely should not
     // live here; needs to be moved to a better place soon
     var bankForRegistrationName = listenerBank[registrationName];
     if (shouldPreventMouseEvent(registrationName, inst._currentElement.type, inst._currentElement.props)) {

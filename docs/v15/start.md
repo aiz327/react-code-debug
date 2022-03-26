@@ -13,7 +13,7 @@ ReactElement作为一个工厂来创建新的React对象
 
 React 15 通过 ReactElement.js提供了全局API
 - React.createElement(type, config, children)
-  config作为props对象传入，其中：
+  config作为props对象传入，其中：$$
   key,ref,__self,__source作为保留参数
   **key和ref为什么不允许访问？**
   创建流程：
@@ -75,6 +75,7 @@ React.PureComponent
   ReactDomComponent再看一下
   组件props的构成再看下（点击次数成了内部的props，为什么）
   理清React.Components和ReactElement的关系.
+  markup
   
 #### 源码中常见到的方法含义
 
@@ -86,3 +87,4 @@ React.PureComponent
 > 编译环境抛出错误
 
 #### 梳理执行流程
+..
